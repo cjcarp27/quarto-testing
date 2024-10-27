@@ -1,0 +1,64 @@
+---
+title: "Vector Geometry"
+author: "John Doe"
+date: today
+format: beamer
+---
+## Learning Objectives
+- Discuss the computational, geometric, and algebraic views of vectors.
+- Recall the notion of the inner product and use it for vector geometry, covering the concepts of, length, distance, orthogonality, and angle.
+- Introduce -Nearest Neighbors ( -NN), a supervised, nonparametric classifier.
+- Discuss the curse of dimensionality, the reason behind the ineffectiveness of -NN in high dimensions, and a potential solution for it
+
+## Vector Geometry
+```{python}
+#| echo: false
+#| fig-align: center
+#| fig-width: 3  # Set the width of the figure in inches
+#| fig-height: 2 # Set the height of the figure in inches
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Define vectors u and v
+u = np.array([2, 2])
+v = np.array([1, -1])
+
+# Plot
+plt.figure(figsize=(10, 6))
+plt.plot([0, u[0]], [0, u[1]], color='green', label='||**u**||')
+plt.plot([0, v[0]], [0, v[1]], color='blue', label='||**v**||')
+plt.plot([u[0], v[0]], [u[1], v[1]], color='red', label='||**u - v**||')
+plt.scatter(*u, color='green')
+plt.scatter(*v, color='blue')
+plt.scatter(0, 0, color='black')
+
+plt.text(1, 1.5, '||u||', fontsize=12, fontweight='bold')
+plt.text(0.5, -1, '||v||', fontsize=12, fontweight='bold')
+plt.text(1.5, 1, '||u - v||', fontsize=12, fontweight='bold')
+
+plt.xlim(-1, 3)
+plt.ylim(-2, 3)
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.grid(color='gray', linestyle='--', linewidth=0.5)
+plt.show()
+```
+
+## Computational View of Vectors
+
+- A list of real numbers with only one column is called a **column vector**, or simply a ***vector***.
+- The set of real numbers of dimension $d$ is denoted as **$\mathbb{R}^d$**.
+
+- These are vectors in **$\mathbb{R}^2$**
+$$
+\mathbf{a} = \begin{bmatrix} 3 \\ -1 \end{bmatrix}, \quad 
+\mathbf{b} = \begin{bmatrix} 0.2 \\ 0.3 \end{bmatrix}, \quad 
+\mathbf{c} = \begin{bmatrix} w_1 \\ w \end{bmatrix}
+$$
+- These are vectors in **$\mathbb{R}^3$**
+
+$$
+\mathbf{a} = \begin{bmatrix} 4 \\ -2 \\ 7 \end{bmatrix}, \quad 
+\mathbf{b} = \begin{bmatrix} 1.1 \\ 0.0 \\ -1.3 \end{bmatrix}, \quad 
+\mathbf{c} = \begin{bmatrix} w_1 \\ w_2 \\ w_3 \end{bmatrix}
+$$

@@ -1,0 +1,11 @@
+{
+  "hash": "5c172edb0ffac2990944c30d187d95fe",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Vector Geometry\"\nauthor: \"John Doe\"\ndate: today\nformat: beamer\n---\n\n## Learning Objectives\n- Discuss the computational, geometric, and algebraic views of vectors.\n- Recall the notion of the inner product and use it for vector geometry, covering the concepts of, length, distance, orthogonality, and angle.\n- Introduce -Nearest Neighbors ( -NN), a supervised, nonparametric classifier.\n- Discuss the curse of dimensionality, the reason behind the ineffectiveness of -NN in high dimensions, and a potential solution for it\n\n## Vector Geometry\n\n::: {.cell fig-height='2' fig-width='3' execution_count=1}\n\n::: {.cell-output .cell-output-display}\n![](ds-coursework-plans_files/figure-beamer/cell-2-output-1.pdf){fig-align='center'}\n:::\n:::\n\n\n## Computational View of Vectors\n\n- A list of real numbers with only one column is called a **column vector**, or simply a ***vector***.\n- The set of real numbers of dimension $d$ is denoted as **$\\mathbb{R}^d$**.\n\n- These are vectors in **$\\mathbb{R}^2$**\n$$\n\\mathbf{a} = \\begin{bmatrix} 3 \\\\ -1 \\end{bmatrix}, \\quad \n\\mathbf{b} = \\begin{bmatrix} 0.2 \\\\ 0.3 \\end{bmatrix}, \\quad \n\\mathbf{c} = \\begin{bmatrix} w_1 \\\\ w \\end{bmatrix}\n$$\n- These are vectors in **$\\mathbb{R}^3$**\n\n$$\n\\mathbf{a} = \\begin{bmatrix} 4 \\\\ -2 \\\\ 7 \\end{bmatrix}, \\quad \n\\mathbf{b} = \\begin{bmatrix} 1.1 \\\\ 0.0 \\\\ -1.3 \\end{bmatrix}, \\quad \n\\mathbf{c} = \\begin{bmatrix} w_1 \\\\ w_2 \\\\ w_3 \\end{bmatrix}\n$$\n\n",
+    "supporting": [
+      "ds-coursework-plans_files/figure-beamer"
+    ],
+    "filters": []
+  }
+}
